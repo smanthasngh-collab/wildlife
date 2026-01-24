@@ -24,20 +24,28 @@ background-position: center;
 
 /* NAVBAR (LIGHT PINK) */
 nav{
-    position:fixed;
-    top:0;
-    width:100%;
-    background:#ffb3d9;
-    padding:15px;
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    z-index:1000;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffb3d9;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  z-index: 1000;
 }
-nav a{
-    color:#8b004f;
-    text-decoration:none;
-    font-weight:600;
+
+@media (max-width: 768px){
+  nav{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  nav a{
+    background: rgba(255,255,255,0.5);
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
 }
 nav a:hover{
     color:black;
@@ -428,6 +436,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
