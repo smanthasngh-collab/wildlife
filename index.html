@@ -2,6 +2,10 @@
 
 
 
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,250 +17,247 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+/* ---------- BASE ---------- */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 body{
-    background: linear-gradient(rgba(255,111,145,0.3), rgba(255,111,145,0.3)), url('https://unsplash.com/photos/w1AIyST6mis/download?force=true');
-    background-size: cover;
-    background-position: center;
-    overflow-x:hidden;
-    color:#333;
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://unsplash.com/photos/w1AIyST6mis/download?force=true') no-repeat center center/cover;
+  color:#fff;
+  overflow-x:hidden;
+  scroll-behavior:smooth;
 }
 
-/* NAVBAR */
-nav {
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    padding:20px 0;
-    position: sticky;
-    top:0;
-    z-index:10;
-    backdrop-filter: blur(8px);
+/* ---------- NAVBAR ---------- */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  padding:20px 0;
+  position:sticky;
+  top:0;
+  z-index:100;
+  backdrop-filter: blur(12px);
+  background:rgba(0,0,0,0.3);
+  border-bottom:1px solid rgba(255,255,255,0.2);
 }
 nav a{
-    text-decoration:none;
-    color:#fff;
-    font-weight:600;
-    padding:8px 15px;
-    transition:0.3s;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  padding:10px 20px;
+  border-radius:12px;
+  transition:.3s;
 }
 nav a:hover{
-    color:#ff2f92;
+  background:linear-gradient(135deg,#ff2f92,#ff99cc);
+  box-shadow:0 4px 15px rgba(255,47,146,0.5);
 }
 
-/* HERO */
+/* ---------- HERO ---------- */
 #home{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    min-height:100vh;
-    color:#fff;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+  text-align:center;
+  text-shadow:1px 1px 8px rgba(0,0,0,0.6);
+  padding-top:60px;
 }
 .profile-box{
-    position:relative;
-    width:200px;
-    height:200px;
-    margin-bottom:20px;
+  width:200px;
+  height:200px;
+  margin-bottom:20px;
 }
 .profile-box img{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #ff2f92;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:5px solid #ff2f92;
+  box-shadow:0 0 20px rgba(255,47,146,0.6);
+  transition:0.3s;
 }
+.profile-box img:hover{
+  transform:scale(1.05);
+}
+h6{font-size:1.6rem; margin-bottom:8px; letter-spacing:1px;}
+#home p{font-size:1.1rem; letter-spacing:1px;}
 
-/* SECTIONS */
-section{
-    padding:80px 10%;
-}
+/* ---------- SECTIONS ---------- */
+section{padding:80px 10%;}
+h2,h3,h4,h5,h6{color:#ff2f92; margin-bottom:25px; text-align:center;}
 
 /* ABOUT */
-#about{
-    text-align:center;
-    color:#fff;
-}
-#about h2{
-    font-size:2.2rem;
-    color:#ff2f92;
-    margin-bottom:20px;
-}
 #about p{
-    max-width:700px;
-    margin:auto;
-    line-height:1.6;
+  max-width:750px;
+  margin:auto;
+  line-height:1.8;
+  font-weight:400;
+  color:#fff;
+  text-shadow:0 0 8px rgba(0,0,0,0.5);
 }
 
 /* SKILLS */
 .skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:20px;
-    justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
 }
 .skill{
-    background:linear-gradient(135deg, #ff99cc, #ff2f92);
-    padding:15px 30px;
-    border-radius:25px;
-    color:white;
-    font-weight:600;
-    transition:.3s;
-    cursor:pointer;
+  background:linear-gradient(135deg,#ff99cc,#ff2f92);
+  padding:15px 35px;
+  border-radius:30px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow:0 4px 15px rgba(255,47,146,0.3);
 }
 .skill:hover{
-    transform:scale(1.1);
+  transform:scale(1.15);
+  box-shadow:0 8px 25px rgba(255,47,146,0.5);
 }
 
 /* PROJECTS */
 .projects{
-    display:flex;
-    flex-wrap:wrap;
-    gap:25px;
-    justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  justify-content:center;
 }
 .project-box, .box, .project-boxs{
-    background:#fff;
-    border-radius:15px;
-    padding:20px;
-    width:260px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.2);
-    text-align:center;
-    transition:.3s;
+  background:rgba(255,255,255,0.95);
+  color:#333;
+  border-radius:18px;
+  padding:25px;
+  width:280px;
+  text-align:center;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+  transition:0.3s;
 }
 .project-box:hover, .box:hover, .project-boxs:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+  transform:translateY(-12px);
+  box-shadow:0 20px 50px rgba(0,0,0,0.35);
 }
 .project-box a, .box a, .project-boxs a{
-    display:inline-block;
-    margin-top:15px;
-    padding:10px 18px;
-    background:#ff2f92;
-    color:#fff;
-    border-radius:10px;
-    text-decoration:none;
-    transition:.3s;
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 20px;
+  background:linear-gradient(135deg,#ff2f92,#ff99cc);
+  color:#fff;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
 }
 .project-box a:hover, .box a:hover, .project-boxs a:hover{
-    background:#ff0066;
+  background:linear-gradient(135deg,#ff0066,#ff2f92);
+  box-shadow:0 4px 15px rgba(255,47,146,0.4);
 }
 
 /* CALCULATOR */
 .calculator{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
 }
 .calculator input{
-    width:100%;
-    padding:12px;
-    font-size:18px;
-    margin-bottom:10px;
+  width:100%;
+  padding:12px;
+  font-size:18px;
+  margin-bottom:10px;
+  border-radius:10px;
+  border:1px solid #ccc;
+  text-align:right;
+  font-weight:500;
 }
 .calculator button{
-    width:23%;
-    padding:10px;
-    margin:1%;
-    border:none;
-    background:#ff2f92;
-    color:#fff;
-    border-radius:8px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+  width:23%;
+  padding:12px;
+  margin:1%;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#ff99cc,#ff2f92);
+  color:#fff;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
 }
 .calculator button:hover{
-    background:#ff0066;
+  transform:scale(1.05);
+  background:linear-gradient(135deg,#ff2f92,#ff0066);
 }
 
 /* TIC TAC TOE */
 .board{
-    display:grid;
-    grid-template-columns:repeat(3,70px);
-    gap:10px;
-    margin-bottom:10px;
+  display:grid;
+  grid-template-columns:repeat(3,70px);
+  gap:12px;
+  margin-bottom:10px;
 }
 .cell{
-    width:70px;
-    height:70px;
-    background:linear-gradient(135deg, #ff99cc, #ff2f92);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:26px;
-    font-weight:600;
-    color:white;
-    cursor:pointer;
-    border-radius:10px;
-    transition:.3s;
+  width:70px;
+  height:70px;
+  background:linear-gradient(135deg,#ff99cc,#ff2f92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  font-weight:600;
+  color:white;
+  cursor:pointer;
+  border-radius:10px;
+  transition:.3s;
 }
-.cell:hover{
-    transform:scale(1.1);
-}
+.cell:hover{transform:scale(1.1);}
 
 /* CONTACT */
-form input,textarea{
-    width:100%;
-    padding:12px;
-    margin:10px 0;
-    border-radius:10px;
-    border:none;
-    background:rgba(255,255,255,0.8);
+form input, textarea{
+  width:100%;
+  padding:14px;
+  margin:10px 0;
+  border-radius:12px;
+  border:none;
+  background:rgba(255,255,255,0.9);
+  color:#333;
+  font-weight:500;
 }
 form button{
-    padding:12px 25px;
-    background:#ff2f92;
-    color:#fff;
-    border:none;
-    border-radius:10px;
-    font-weight:600;
-    cursor:pointer;
-    transition:.3s;
+  padding:12px 28px;
+  background:linear-gradient(135deg,#ff2f92,#ff0066);
+  color:#fff;
+  border:none;
+  border-radius:12px;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
 }
 form button:hover{
-    background:#ff0066;
+  transform:scale(1.05);
+  box-shadow:0 4px 15px rgba(255,47,146,0.4);
 }
 
 /* FALLING BALLS */
 .ball{
-    position:fixed;
-    top:-20px;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:rgba(255,47,146,0.8);
-    pointer-events:none;
-    z-index:-1;
-    animation:fall linear infinite;
+  position:fixed;
+  top:-20px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:rgba(255,47,146,0.7);
+  pointer-events:none;
+  z-index:-1;
+  animation:fall linear infinite;
 }
-@keyframes fall{
-    to{ transform:translateY(110vh);}
-}
+@keyframes fall{to{transform:translateY(110vh);}}
 
-/* HEADINGS */
-h1,h2,h3,h4,h5,h6{
-    text-align:center;
-    color:#ff2f92;
-}
-h3{
-    margin-bottom:10px;
-}
-a{
-    text-decoration:none;
-}
-
-@media (max-width:768px){
-    nav{ flex-direction:column; gap:15px; }
-    .board{ grid-template-columns:repeat(3,60px); }
-    .calculator button{ width:28%; }
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{flex-direction:column;gap:15px;}
+  .board{grid-template-columns:repeat(3,60px);}
+  .calculator button{width:28%;}
+  .skills{justify-content:center;}
+  .projects{flex-direction:column;align-items:center;}
 }
 </style>
 </head>
@@ -283,7 +284,7 @@ a{
 <!-- ABOUT -->
 <section id="about">
 <h2>About Me</h2>
-<p>My Name is Rohit and I am currently pursuing the CWT Course from Hartron. I have completed my Graduation from Ambala. I enjoy working with HTML, CSS, and MS Excel. I continuously learn new skills to grow in the field of technology.</p>
+<p>My Name is Rohit and I am currently Pursuing the CWT Course from Hartron. I have completed my Graduation from Ambala. I enjoy working with HTML, CSS, and MS Excel. I continuously learn new skills to grow in the field of Technology.</p>
 </section>
 
 <!-- SKILLS -->
@@ -302,6 +303,7 @@ a{
 <section id="projects">
 <h2>Projects</h2>
 <div class="projects">
+
 <div class="project-box">
 <h3>Calculator</h3>
 <div class="calculator">
@@ -341,6 +343,7 @@ a{
 <h3>Wildlife</h3>
 <a href="https://smanthasngh-collab.github.io/india/" target="_blank">Live Demo</a>
 </div>
+
 </div>
 </section>
 
@@ -355,47 +358,32 @@ a{
 </form>
 </section>
 
-<!-- SCRIPTS -->
+<!-- SCRIPT -->
 <script>
-/* Calculator */
+/* CALCULATOR */
 let display=document.getElementById("display");
 function add(v){ display.value+=v; }
 function calculate(){ try{ display.value=eval(display.value); }catch{display.value="Error";} }
 function clearAll(){ display.value=""; }
 function del(){ display.value=display.value.slice(0,-1); }
 
-/* Tic Tac Toe */
+/* TIC TAC TOE */
 let board=document.getElementById("board");
 let turn="X";
 function resetGame(){ board.innerHTML=""; turn="X"; init(); }
-function init(){
-for(let i=0;i<9;i++){
-    let c=document.createElement("div");
-    c.className="cell";
-    c.onclick=()=>{
-        if(c.innerHTML==""){ c.innerHTML=turn; turn=turn=="X"?"O":"X"; }
-    };
-    board.appendChild(c);
-}}
+function init(){for(let i=0;i<9;i++){let c=document.createElement("div");c.className="cell";c.onclick=()=>{if(c.innerHTML==""){c.innerHTML=turn;turn=turn=="X"?"O":"X";}};board.appendChild(c);}}
 init();
 
-/* Falling pink balls */
+/* FALLING BALLS */
 setInterval(()=>{
-    let b=document.createElement("div");
-    b.className="ball";
-    b.style.left=Math.random()*100+"vw";
-    b.style.animationDuration=Math.random()*3+3+"s";
-    b.style.width=b.style.height=Math.random()*10+8+"px";
-    document.body.appendChild(b);
-    setTimeout(()=>b.remove(),6000);
+  let b=document.createElement("div");
+  b.className="ball";
+  b.style.left=Math.random()*100+"vw";
+  b.style.animationDuration=Math.random()*3+3+"s";
+  b.style.width=b.style.height=Math.random()*10+8+"px";
+  document.body.appendChild(b);
+  setTimeout(()=>b.remove(),6000);
 },150);
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
