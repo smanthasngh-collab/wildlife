@@ -23,34 +23,39 @@ background-position: center;
 
 
 /* NAVBAR (LIGHT PINK) */
-.navbar {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 15px;
-  background: transparent;
-  flex-wrap: wrap;
- z-index: 1000;
- text-align: center;
+/* ===== SIMPLE NAV ===== */
+nav {
+    display: flex;
+    justify-content: center;  /* center links horizontally */
+    align-items: center;
+    gap: 25px;                /* spacing between links */
+    padding: 15px 0;
+    background: transparent;  /* ya light pink */
 }
 
-.navbar a {
-  text-decoration: none;
-  color: purple;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 20px;
-  transition: 0.3s;
+nav a {
+    text-decoration: none;
+    color: purple;
+    font-weight: 600;
+    padding: 5px 10px;       /* minimal padding */
+    transition: 0.3s;
 }
 
-.navbar a:hover {
-  background: rgba(255,105,180,0.2);
+nav a:hover {
+    color: #ff0066;           /* simple hover */
 }
+
+/* ===== MOBILE ===== */
 @media (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
+    nav {
+        flex-direction: column; /* stack links vertically */
+        gap: 12px;
+        align-items: center;
+    }
+    nav a {
+        width: 80%;            /* mobile friendly */
+        text-align: center;
+    }
 }
 /* SECTIONS */
 section{
@@ -437,6 +442,7 @@ setInterval(()=>{
 
 </body>
 </html>
+
 
 
 
