@@ -1,9 +1,15 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Premium Portfolio</title>
+<title>Rohit Singh | Portfolio</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
@@ -14,55 +20,34 @@
     font-family:'Poppins', sans-serif;
 }
 body{
-    background-image: url(https://unsplash.com/photos/w1AIyST6mis/download?force=true);
-  background-repeat: no-repeat;
-background-size: cover;
-background-position: center;
+    background: linear-gradient(rgba(255,111,145,0.3), rgba(255,111,145,0.3)), url('https://unsplash.com/photos/w1AIyST6mis/download?force=true');
+    background-size: cover;
+    background-position: center;
+    overflow-x:hidden;
+    color:#333;
+}
 
-    overflow-x:hidden;}
-
-
-/* NAVBAR (LIGHT PINK) */
-/* ===== SIMPLE NAV ===== */
+/* NAVBAR */
 nav {
-    display: flex;
-    justify-content: center;  /* center links horizontally */
-    align-items: center;
-    gap: 25px;                /* spacing between links */
-    padding: 15px 0;
-    background: transparent;  /* ya light pink */
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    padding:20px 0;
+    position: sticky;
+    top:0;
+    z-index:10;
+    backdrop-filter: blur(8px);
 }
-
-nav a {
-    text-decoration: none;
-    color: purple;
-    font-weight: 600;
-    padding: 5px 10px;       /* minimal padding */
-    transition: 0.3s;
+nav a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+    padding:8px 15px;
+    transition:0.3s;
 }
-
-nav a:hover {
-    color: #ff0066;           /* simple hover */
+nav a:hover{
+    color:#ff2f92;
 }
-
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column; /* stack links vertically */
-        gap: 12px;
-        align-items: center;
-    }
-    nav a {
-        width: 80%;            /* mobile friendly */
-        text-align: center;
-    }
-}
-/* SECTIONS */
-section{
-    padding:100px 10%;
-    min-height:100vh;
-}
-h1{ color:#ff0066; }
 
 /* HERO */
 #home{
@@ -71,11 +56,10 @@ h1{ color:#ff0066; }
     align-items:center;
     justify-content:center;
     text-align:center;
-    width: 100%;
-    padding-top: 80px;
+    min-height:100vh;
+    color:#fff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
 }
-
-/* PROFILE */
 .profile-box{
     position:relative;
     width:200px;
@@ -87,220 +71,198 @@ h1{ color:#ff0066; }
     height:160px;
     border-radius:50%;
     object-fit:cover;
-    position:absolute;
-    top:20px;
-    left:20px;
-    z-index:2;
     border:5px solid #ff2f92;
 }
 
+/* SECTIONS */
+section{
+    padding:80px 10%;
+}
 
-
+/* ABOUT */
+#about{
+    text-align:center;
+    color:#fff;
+}
+#about h2{
+    font-size:2.2rem;
+    color:#ff2f92;
+    margin-bottom:20px;
+}
+#about p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.6;
+}
 
 /* SKILLS */
 .skills{
     display:flex;
-    gap:15px;
     flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
 }
 .skill{
-    background:#ff99cc;
+    background:linear-gradient(135deg, #ff99cc, #ff2f92);
     padding:15px 30px;
     border-radius:25px;
+    color:white;
+    font-weight:600;
     transition:.3s;
+    cursor:pointer;
 }
 .skill:hover{
-    background:#ff2f92;
-    color:white;
     transform:scale(1.1);
 }
 
 /* PROJECTS */
 .projects{
     display:flex;
-    gap:30px;
     flex-wrap:wrap;
+    gap:25px;
+    justify-content:center;
 }
-.project-box{
-    width:290px;
-    padding:20px;
-    background:white;
+.project-box, .box, .project-boxs{
+    background:#fff;
     border-radius:15px;
-    box-shadow:0 10px 20px rgba(0,0,0,.1);
+    padding:20px;
+    width:260px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+    text-align:center;
     transition:.3s;
 }
-.project-box:hover{ transform:translateY(-10px); }
+.project-box:hover, .box:hover, .project-boxs:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+.project-box a, .box a, .project-boxs a{
+    display:inline-block;
+    margin-top:15px;
+    padding:10px 18px;
+    background:#ff2f92;
+    color:#fff;
+    border-radius:10px;
+    text-decoration:none;
+    transition:.3s;
+}
+.project-box a:hover, .box a:hover, .project-boxs a:hover{
+    background:#ff0066;
+}
 
 /* CALCULATOR */
+.calculator{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
 .calculator input{
-    
     width:100%;
     padding:12px;
     font-size:18px;
-    
+    margin-bottom:10px;
 }
 .calculator button{
     width:23%;
     padding:10px;
     margin:1%;
+    border:none;
+    background:#ff2f92;
+    color:#fff;
+    border-radius:8px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+.calculator button:hover{
+    background:#ff0066;
 }
 
 /* TIC TAC TOE */
 .board{
     display:grid;
     grid-template-columns:repeat(3,70px);
-    gap:5px;
+    gap:10px;
+    margin-bottom:10px;
 }
 .cell{
     width:70px;
     height:70px;
-    background:#ff99cc;
+    background:linear-gradient(135deg, #ff99cc, #ff2f92);
     display:flex;
     align-items:center;
     justify-content:center;
     font-size:26px;
+    font-weight:600;
+    color:white;
     cursor:pointer;
+    border-radius:10px;
+    transition:.3s;
+}
+.cell:hover{
+    transform:scale(1.1);
 }
 
 /* CONTACT */
 form input,textarea{
     width:100%;
-    padding:10px;
+    padding:12px;
     margin:10px 0;
+    border-radius:10px;
+    border:none;
+    background:rgba(255,255,255,0.8);
 }
 form button{
-    padding:10px 30px;
+    padding:12px 25px;
     background:#ff2f92;
-    color:white;
+    color:#fff;
     border:none;
+    border-radius:10px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+form button:hover{
+    background:#ff0066;
 }
 
-/* FALLING PINK BALLS */
+/* FALLING BALLS */
 .ball{
     position:fixed;
     top:-20px;
     width:12px;
     height:12px;
     border-radius:50%;
-    background:#ff2f92;
-    opacity:0.8;
+    background:rgba(255,47,146,0.8);
+    pointer-events:none;
+    z-index:-1;
     animation:fall linear infinite;
 }
 @keyframes fall{
-    to{
-        transform:translateY(110vh);
-    }
+    to{ transform:translateY(110vh);}
 }
 
-h1{
-     text-align: left;
-    font-size: large;
-    display: inline-block;
-    background-color: palevioletred;
-    color:#8b004f;  
-    padding: 6px 18px;
-    border-radius: 10px;
-}
-h2{
-    display: inline-block;
-    background-color: palevioletred;
-    color:#8b004f;  
-    padding: 6px 18px;
-    border-radius: 10px;
-    text-align: center;}
-
-
-    
-
-
-    
-
-h4{
-     text-align: left;
-    font-size: large;
-    display: inline-block;
-    background-color: palevioletred;
-    color:#8b004f;  
-    padding: 6px 18px;
-    border-radius: 10px;
-}
-h5{
-    text-align: left;
-    font-size: large;
-    display: inline-block;
-    background-color: palevioletred;
-    color:#8b004f;  
-    padding: 6px 18px;
-    border-radius: 10px;
-    
-}
-#about{
-    text-align: center;
-}
-#projects{
-    text-align: right;
-}
-h6{
-    font-size: larger;
-    color: purple;
-}
-.box{
-    width: 300px;
-    height: 300px;
-    
+/* HEADINGS */
+h1,h2,h3,h4,h5,h6{
+    text-align:center;
+    color:#ff2f92;
 }
 h3{
-    text-align: center;
-    display: inline-block;
-    background-color: palevioletred;
-    color:#8b004f;  
-    padding: 6px 18px;
-    border-radius: 10px;
+    margin-bottom:10px;
 }
- .box{display: inline-block;
-    background-color: palevioletred;
-    background-image: url("https://unsplash.com/photos/eU2KIxcA6hg/download?force=true");
-    background-size: cover;
-    color:#8b004f;  
-    padding: 6px 18px;
-    border-radius: 10px;
-}
-.project-boxs{ width: 100px;
-    height: 100px;
-    
-    
+a{
+    text-decoration:none;
 }
 
- 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 16px;
-}
-  .flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.flex > div {
-  flex: 1 1 300px;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-} @media (max-width: 768px) {
-  h1 { font-size: 26px; }
-  h2 { font-size: 22px; }
-  .flex { flex-direction: column; }
+@media (max-width:768px){
+    nav{ flex-direction:column; gap:15px; }
+    .board{ grid-template-columns:repeat(3,60px); }
+    .calculator button{ width:28%; }
 }
 </style>
 </head>
-
 <body>
 
+<!-- NAVBAR -->
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
@@ -309,24 +271,24 @@ img {
 <a href="#contact">Contact</a>
 </nav>
 
+<!-- HERO -->
 <section id="home">
 <div class="profile-box">
-
-<img src="https://unsplash.com/photos/zS0Jd-GI6xA/download?force=true">
+<img src="https://unsplash.com/photos/zS0Jd-GI6xA/download?force=true" alt="Rohit Singh">
 </div>
 <h6>I am ROHIT, A Web Developer</h6>
 <p>Creative • Aesthetic • Modern</p>
+</section>
 
+<!-- ABOUT -->
 <section id="about">
-<h2>About Me</h2><br><br>
-<p>My Name is Rohit and I am currently Pursuing the CWT Course from Hartron. I have completed my Graduation from Ambala. I enjoying working with HTML,CSS,AND MS EXCEL.and I continously learn new skills to grow in the field of Technology.  </p>
+<h2>About Me</h2>
+<p>My Name is Rohit and I am currently pursuing the CWT Course from Hartron. I have completed my Graduation from Ambala. I enjoy working with HTML, CSS, and MS Excel. I continuously learn new skills to grow in the field of technology.</p>
 </section>
-</section>
 
-
-
+<!-- SKILLS -->
 <section id="skills">
-<h1>Skills</h1><br><br>
+<h2>Skills</h2>
 <div class="skills">
 <div class="skill">HTML</div>
 <div class="skill">CSS</div>
@@ -336,10 +298,10 @@ img {
 </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
-<h5>Projects</h5><br><br>
+<h2>Projects</h2>
 <div class="projects">
-
 <div class="project-box">
 <h3>Calculator</h3>
 <div class="calculator">
@@ -372,33 +334,28 @@ img {
 
 <div class="box">
 <h3>HOME DECOR</h3>
-<a href="https://smanthasngh-collab.github.io/homedecor/" target="_blank">
-  Live Demo
-</a>
-
+<a href="https://smanthasngh-collab.github.io/homedecor/" target="_blank">Live Demo</a>
 </div>
 
 <div class="project-boxs">
-<h3>wildlife</h3>
-<a href="https://smanthasngh-collab.github.io/india/" target="_blank">
-  Live Demo
-</a>
+<h3>Wildlife</h3>
+<a href="https://smanthasngh-collab.github.io/india/" target="_blank">Live Demo</a>
 </div>
-
 </div>
-    
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-<h4>Contact Me</h4>
+<h2>Contact Me</h2>
 <form>
-<input placeholder="Name">
+<input type="text" placeholder="Name">
 <input type="email" placeholder="Email">
-<textarea placeholder="Message"></textarea>
+<textarea placeholder="Message" rows="5"></textarea>
 <button>Send</button>
 </form>
 </section>
 
+<!-- SCRIPTS -->
 <script>
 /* Calculator */
 let display=document.getElementById("display");
@@ -410,27 +367,19 @@ function del(){ display.value=display.value.slice(0,-1); }
 /* Tic Tac Toe */
 let board=document.getElementById("board");
 let turn="X";
-function resetGame(){
-    board.innerHTML="";
-    turn="X";
-    init();
-}
+function resetGame(){ board.innerHTML=""; turn="X"; init(); }
 function init(){
-    for(let i=0;i<9;i++){
-        let c=document.createElement("div");
-        c.className="cell";
-        c.onclick=()=>{
-            if(c.innerHTML==""){
-                c.innerHTML=turn;
-                turn=turn=="X"?"O":"X";
-            }
-        };
-        board.appendChild(c);
-    }
-}
+for(let i=0;i<9;i++){
+    let c=document.createElement("div");
+    c.className="cell";
+    c.onclick=()=>{
+        if(c.innerHTML==""){ c.innerHTML=turn; turn=turn=="X"?"O":"X"; }
+    };
+    board.appendChild(c);
+}}
 init();
 
-/* PINK BALL FALL */
+/* Falling pink balls */
 setInterval(()=>{
     let b=document.createElement("div");
     b.className="ball";
@@ -441,12 +390,8 @@ setInterval(()=>{
     setTimeout(()=>b.remove(),6000);
 },150);
 </script>
-
 </body>
 </html>
-
-
-
 
 
 
