@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,8 +20,8 @@ html{scroll-behavior:smooth;}
 
 body{
   background:
-    linear-gradient(rgba(2,6,23,.82),rgba(2,6,23,.82)),
-    url("https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&w=2400&q=80")
+    
+    url("https://unsplash.com/photos/4lKCL1ovUCk/download?force=true")
     no-repeat center/cover fixed;
   color:#e5e7eb;
   overflow-x:hidden;
@@ -90,7 +91,7 @@ section{
   height:190px;
   padding:5px;
   border-radius:50%;
-  background:linear-gradient(135deg,#38bdf8,#a78bfa);
+  background:linear-gradient(135deg,#8b004f,#a78bfa);
   margin-bottom:18px;
   animation:float 6s ease-in-out infinite;
 }
@@ -108,13 +109,12 @@ section{
 }
 
 h6{
-  font-size:32px;
-  font-weight:800;
-  background:linear-gradient(90deg,#38bdf8,#a78bfa,#38bdf8);
-  background-size:200%;
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  animation:textFlow 6s linear infinite;
+  text-align: center;
+    display: inline-block;
+    background-color: palevioletred;
+    color:#8b004f;  
+    padding: 6px 18px;
+    border-radius: 21px;
 }
 
 @keyframes textFlow{
@@ -128,11 +128,17 @@ h6{
 }
 
 /* ================= HEADINGS ================= */
-h1,h2,h3,h4,h5{
+h3{ text-align: left;
+    display: inline-block;
+    background-color: palevioletred;
+    color:#8b004f;  
+    padding: 6px 18px;
+    border-radius: 8px;
+  font-size: large;
   margin-bottom:18px;
   font-weight:700;
   background:linear-gradient(90deg,#38bdf8,#a78bfa);
-  -webkit-background-clip:text;
+
   -webkit-text-fill-color:transparent;
 }
 
@@ -295,6 +301,74 @@ form button{
   section{padding:100px 6%;}
   nav{gap:18px;}
 }
+p{
+  
+    
+    background-color:slateblue;
+     
+    padding: 6px 18px;
+    border-radius: 8px;
+}
+
+#about{ text-align: left;
+  
+    
+}
+
+
+h2{ text-align: left;
+    display: inline-block;
+    background-color: palevioletred;
+    color:#8b004f;  
+    padding: 6px 18px;
+    border-radius: 8px;
+  font-size: large;}
+
+h1{
+  background-color:hotpink;
+  color: #8b004f;
+  display: inline-block;
+   padding: 6px 15px;
+    border-radius: 10px;
+    font-size:large;
+  
+}
+h5{ text-align: left;
+    display: inline-block;
+    background-color: palevioletred;
+    color:#8b004f;  
+    padding: 6px 18px;
+    border-radius: 8px;
+  font-size: medium;
+
+}
+
+h4{
+  text-align: left;
+    display: inline-block;
+    background-color: slateblue;
+    color:whitesmoke;  
+    padding: 6px 18px;
+    border-radius: 8px;
+  font-size: large;}
+    
+#about-text{background: rgba(70,130,180,0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color:#ffffff;
+  padding: 18px 26px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.35);
+
+}
+  .box{
+    background-image: url(https://unsplash.com/photos/TWOnvtstmeU/download?force=true); background-size: cover;
+  }  
+    
+.n{
+  color: #8b004f;
+}
+
 </style>
 </head>
 
@@ -310,15 +384,15 @@ form button{
 
 <section id="home">
   <div class="profile-box">
-    <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=600&q=80">
+    <img src="https://unsplash.com/photos/zS0Jd-GI6xA/download?force=true">
   </div>
   <h6>I am ROHIT, A Web Developer</h6>
   <p>Creative • Aesthetic • Modern</p>
 </section>
 
 <section id="about">
-  <h2>About Me</h2>
-  <p>
+  <h2>About Me</h2><br><br>
+  <p id="about-text">
     My Name is Rohit and I am currently Pursuing the CWT Course from Hartron.
     I have completed my Graduation from Ambala. I enjoy working with HTML,
     CSS and MS Excel and continuously learn new skills to grow in Technology.
@@ -372,12 +446,12 @@ form button{
 
     <div class="box">
       <h3>HOME DECOR</h3>
-      <a href="https://smanthasngh-collab.github.io/homedecor/" target="_blank">Live Demo</a>
+      <a href="https://smanthasngh-collab.github.io/homedecor/" target="_blank" class="n">Live </a>
     </div>
 
     <div class="project-boxs">
       <h3>Wildlife</h3>
-      <a href="https://smanthasngh-collab.github.io/india/" target="_blank">Live Demo</a>
+      <a href="https://smanthasngh-collab.github.io/india/" target="_blank">Live </a>
     </div>
 
   </div>
